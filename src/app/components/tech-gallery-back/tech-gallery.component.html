@@ -1,0 +1,20 @@
+<article class="pb-2 lg:pb-4 my-6 rounded-md border-2 border-gray-900 border-opacity-60" style="box-shadow: 7px 7px 15px rgb(0, 0, 0);">
+    <div class="flex lg:pl-24 pt-4 pb-2 h-auto items-center">
+        <button class="w-2/5 sm:w-2/5 h-auto">
+            <img src="https://www.freeiconspng.com/uploads/blue-right-arrow-icon-23.png" loading="lazy" (click)="previousTech()" alt="Previous skill" class="rotate-180 hover:-translate-x-4 transition-transform duration-300 w-fit h-auto">
+        </button>
+        <div class="flex w-1/5 sm:w-1/5 h-32 rounded-lg bg-blue-300 object-contain justify-center items-center p-1" style="filter:saturate(150%); filter:blur(2px); box-shadow: 2px 2px 7px rgb(0, 0, 0);">
+            <img [src]="techs[(this.idx > 0) ? this.idx - 1 : this.techs.length - 1].img" loading="lazy" alt="previous skill" class="max-w-full max-h-full" style="filter:saturate(30%);">
+        </div>
+        <div class="flex w-3/5 h-44 py-4 px-2 rounded-lg bg-blue-500 justify-center my-2 sm:my-0 lg:my-0 p-1 mx-1" style="box-shadow: 2px 2px 7px rgb(0, 0, 0);">
+            <img [src]="techs[idx].img" loading="lazy" alt="{{ techs[idx].name }}" class="max-w-full max-h-full" style="filter:saturate(200%);">
+        </div>
+        <div class="flex w-1/5 sm:w-1/5 h-32 rounded-lg bg-blue-300 justify-center items-center p-1" style="filter:saturate(150%);  filter:blur(2px); box-shadow: 2px 2px 7px rgb(0, 0, 0);">
+            <img [src]="techs[(this.idx < this.techs.length - 1) ? this.idx + 1 : 0].img" loading="lazy" alt="next skill" class="max-w-full max-h-full" style="filter:saturate(30%);">
+        </div>
+        <button class="w-2/5  sm:w-2/5 lg:mr-20 h-auto">
+            <img src="https://www.freeiconspng.com/uploads/blue-right-arrow-icon-23.png" loading="lazy" (click)="nextTech()" alt="Next skill" class="hover:translate-x-4 transition-transform duration-300 w-fit h-auto">
+        </button>
+    </div>
+    <h3 class="bg-gray-900 text-blue-700 opacity-60 text-center">{{ techs[idx].name }}</h3>
+</article>

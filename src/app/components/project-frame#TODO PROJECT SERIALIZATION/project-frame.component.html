@@ -1,0 +1,8 @@
+<article class=" text-center my-2 lg:w-1/2 flex flex-wrap rounded-3xl place-content-center bg-gray-700 hover:border-2 hover:border-gray-400 hover:bg-gray-600" *ngFor="let project of featuredProjects">
+    <h2 class="text-2xl py-2 w-full -mb-2 font-bold" style="text-shadow: 0px 1px 2px rgba(255,255,255,1);"><a href="{{project.link}}">{{project.name}}</a></h2>
+    <h3 class="text-lg py-2 w-full text-neutral-300 font-extralight">{{project.subtitle}}</h3>
+    <a href="{{project.link}}" class="lg:p-4">
+        <img src="{{project.image}}" loading="lazy" class="rounded-xl border-2 min-w-2/4 max-w-3/4 border-gray-400 hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.50)]" alt="*Project name* image">
+    </a>
+    <p class="text-md text-gray-50 py-4 w-full font-mono font-medium text-center">{{project.description}}</p>
+</article>
