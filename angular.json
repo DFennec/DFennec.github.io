@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "docs",
-            "baseHref": "https://DFennec.github.io/DFennec.github.io/",
+            "baseHref": "/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
